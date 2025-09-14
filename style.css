@@ -210,4 +210,20 @@ h3{font-size:var(--fs-3)}
   }
   .site-header.open .nav .menu{transform:none;opacity:1;pointer-events:auto}
   .nav .menu .divider{display:none}
+
+  /* Ensure the 'קביעת תור' CTA in the mobile nav wraps to content and doesn't stretch full width */
+  .nav .menu li:last-child{
+    width:auto;
+    min-width:0;
+    justify-self:start;
+    align-self:start;
+  }
+  .nav .menu li:last-child a.btn{
+    display:inline-block;
+    width:auto; /* fallback */
+    inline-size:fit-content;
+    max-inline-size:100%;
+    white-space:normal;
+    flex-grow:0;
+  }
 }
