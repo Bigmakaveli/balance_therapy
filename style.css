@@ -135,7 +135,7 @@ a:hover{text-decoration:underline}
 
 /* Global language switcher (top-left) */
 .global-lang-switch{
-  display:flex;
+  display:inline-flex;
   gap:8px;
   background:rgba(247,241,236,.92);
   backdrop-filter:saturate(120%) blur(8px);
