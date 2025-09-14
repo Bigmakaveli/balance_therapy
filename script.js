@@ -4,12 +4,20 @@ document.addEventListener('DOMContentLoaded', function(){
   var yearEl = document.getElementById('year');
   if (yearEl){ yearEl.textContent = new Date().getFullYear(); }
 
-  // Hero intro video: try to autoplay with sound; if blocked, start on first user interaction
+  // Mute all videos by default (and ensure inline playback)
+  document.querySelectorAll('video').forEach(function(v){
+    v.muted = true;
+    v.defaultMuted = true;
+    v.setAttribute('muted','');
+    v.setAttribute('playsinline','');
+  });
+
+  // Hero intro video: muted autoplay; if blocked, start on first user interaction
   var heroVideo = document.querySelector('.hero-section .video');
   if (heroVideo){
-    // Ensure correct attributes/properties for inline playback with sound
-    heroVideo.muted = false;
-    heroVideo.defaultMuted = false;
+    // Ensure correct attributes/properties for inline muted playback
+    heroVideo.muted = true;
+    heroVideo.defaultMuted = true;
     heroVideo.volume = 1.0;
     heroVideo.autoplay = true;
     heroVideo.playsInline = true;
@@ -17,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     var tryPlay = function(){
       try {
-        heroVideo.muted = false;
+        heroVideo.muted = true;
         var p = heroVideo.play();
         return (p && typeof p.then === 'function') ? p : Promise.resolve();
       } catch(e){
@@ -147,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var current = 0;
-    var interval = 2000;
+    var interval = 5000;
     var paused = false;
 
     function updateProgress(index, resetOnly){
@@ -190,6 +198,11 @@ document.addEventListener('DOMContentLoaded', function(){
       current = (current + 1) % pics.length;
       show(current, true);
     }
+    function prev(){
+      if (paused || reduceMotion || document.hidden) return;
+      current = (current - 1 + pics.length) % pics.length;
+      show(current, true);
+    }
 
     // Init
     show(0, true);
@@ -213,8 +226,16 @@ document.addEventListener('DOMContentLoaded', function(){
     slider.addEventListener('touchstart', function(){ paused = true; stopTimer(); }, {passive:true});
     slider.addEventListener('touchend', function(){ paused = false; startTimer(); show(current, true); });
 
-    // Click/tap to advance
-    slider.addEventListener('click', function(){ if (reduceMotion) return; next(); stopTimer(); startTimer(); });
+    // Click/tap navigation: left side = previous, right side = next
+    slider.addEventListener('click', function(e){
+      if (reduceMotion) return;
+      var rect = slider.getBoundingClientRect();
+      var x = e.clientX || 0;
+      var isLeft = (x - rect.left) < (rect.width / 2);
+      if (isLeft){ prev(); } else { next(); }
+      stopTimer();
+      startTimer();
+    });
 
     // Visibility handling
     document.addEventListener('visibilitychange', function(){
