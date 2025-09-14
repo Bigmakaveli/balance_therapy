@@ -298,8 +298,7 @@ document.addEventListener('DOMContentLoaded', function(){
   var currentLang = (function(){
     var qp = new URLSearchParams(location.search).get('lang');
     var saved = localStorage.getItem('lang');
-    var navLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
-    return normalizeLang(qp || saved || navLang || 'he');
+    return normalizeLang(qp || saved || 'he');
   })();
 
   function t(key){
