@@ -1,0 +1,24 @@
+# Ignore everything by default
+*
+
+# But don't ignore these specific file types and folders
+!*.js
+!*.html
+!*.css
+!*.mp4
+!*.mov
+!*.webm
+!*.avi
+!images/
+!images/**
+
+# Ignore common system files
+.DS_Store
+Thumbs.db
+
+# Ignore aider files
+.aider*
+
+# Ignore chat history and other temporary files
+chat_history.json
+ASSISTANT_REPLY.txt
