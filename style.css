@@ -186,6 +186,23 @@ input:focus,textarea:focus{border-color:var(--lav);box-shadow:0 0 0 4px rgba(166
 .sticky-cta{position:fixed;inset-inline:0;bottom:0;display:flex;justify-content:center;padding:.6rem;background:rgba(247,241,236,.96);box-shadow:0 -8px 20px rgba(0,0,0,.06);backdrop-filter:saturate(120%) blur(6px);z-index:15}
 .sticky-cta .btn{box-shadow:var(--shadow-sm)}
 
+/* Instagram FAB */
+.insta-fab{
+  position:fixed;
+  right:16px;
+  bottom:calc(88px + env(safe-area-inset-bottom, 0px)); /* lifted to avoid sticky CTA */
+  width:56px;height:56px;border-radius:50%;
+  display:grid;place-items:center;
+  color:#fff;
+  background:linear-gradient(45deg,#F58529 0%,#FEDA77 25%,#DD2A7B 50%,#8134AF 75%,#515BD4 100%);
+  box-shadow:0 10px 20px rgba(0,0,0,.18);
+  z-index:1000;
+  transition:transform .15s ease, box-shadow .2s ease;
+}
+.insta-fab:hover{transform:translateY(-1px);box-shadow:0 14px 28px rgba(0,0,0,.22);text-decoration:none}
+.insta-fab:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.insta-fab svg{width:26px;height:26px;display:block}
+
 /* Headings */
 h1,h2,h3{font-family:var(--font-heading);margin:.2em 0 .6em}
 h1{font-size:var(--fs-1)}
