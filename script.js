@@ -4,6 +4,47 @@ document.addEventListener('DOMContentLoaded', function(){
   var yearEl = document.getElementById('year');
   if (yearEl){ yearEl.textContent = new Date().getFullYear(); }
 
+  // Hero intro video: try to autoplay with sound; if blocked, start on first user interaction
+  var heroVideo = document.querySelector('.hero-section .video');
+  if (heroVideo){
+    // Ensure correct attributes/properties for inline playback with sound
+    heroVideo.muted = false;
+    heroVideo.defaultMuted = false;
+    heroVideo.volume = 1.0;
+    heroVideo.autoplay = true;
+    heroVideo.playsInline = true;
+    heroVideo.setAttribute('playsinline', '');
+
+    var tryPlay = function(){
+      try {
+        heroVideo.muted = false;
+        var p = heroVideo.play();
+        return (p && typeof p.then === 'function') ? p : Promise.resolve();
+      } catch(e){
+        return Promise.reject(e);
+      }
+    };
+
+    tryPlay().catch(function(){
+      function removeKickstart(){
+        document.removeEventListener('pointerdown', kickstart);
+        document.removeEventListener('click', kickstart);
+        document.removeEventListener('touchstart', kickstart);
+      }
+      function kickstart(){
+        var p2 = tryPlay();
+        if (p2 && typeof p2.then === 'function'){
+          p2.then(removeKickstart).catch(removeKickstart);
+        } else {
+          removeKickstart();
+        }
+      }
+      document.addEventListener('pointerdown', kickstart);
+      document.addEventListener('click', kickstart);
+      document.addEventListener('touchstart', kickstart);
+    });
+  }
+
   // Smooth scroll for internal anchors (respect reduced motion)
   var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
