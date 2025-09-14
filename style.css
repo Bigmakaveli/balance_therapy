@@ -121,6 +121,10 @@ a:hover{text-decoration:underline}
 .hero-text .lead{color:var(--muted);font-size:clamp(16px,2vw,20px)}
 .cta-row{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1rem}
 
+/* Intro Video */
+.video-hero .video-frame{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);background:#000}
+.video-hero .video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+
 /* Services */
 .service .meta{display:flex;gap:8px;margin-top:8px}
 .pill{display:inline-block;padding:.2rem .6rem;border-radius:999px;background:rgba(166,138,200,.12);color:#4b3f5f;font-weight:600;font-size:.9rem}
