@@ -348,9 +348,8 @@ document.addEventListener('DOMContentLoaded', function(){
     setText('#nav-menu li:nth-child(1) a','nav.home');
     setText('#nav-menu li:nth-child(2) a','nav.about');
     setText('#nav-menu li:nth-child(3) a','nav.services');
-    setText('#nav-menu li:nth-child(4) a','nav.blog');
-    setText('#nav-menu li:nth-child(5) a','nav.testimonials');
-    setText('#nav-menu li:nth-child(6) a','nav.contact');
+    setText('#nav-menu li:nth-child(4) a','nav.testimonials');
+    setText('#nav-menu li:nth-child(5) a','nav.contact');
     var navBook = document.querySelector('#nav-menu a.btn.btn-primary.sm');
     if (navBook) navBook.textContent = t('nav.book');
 
@@ -431,9 +430,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var contactFirstP = document.querySelector('#contact .container .card p');
     if (contactFirstP){
       contactFirstP.innerHTML = t('contact.phoneLabel') + ' ' +
-        '<a href="https://wa.me/972506364387"><span class="ltr">+972 50-636-4387</span></a><br> ' +
-        t('contact.emailLabel') + ' ' +
-        '<a href="mailto:hello@example.com">hello@example.com</a>';
+        '<a href="https://wa.me/972506364387"><span class="ltr">+972 50-636-4387</span></a>';
     }
     setText('label[for="name"]','form.name');
     setText('label[for="phone"]','form.phone');
