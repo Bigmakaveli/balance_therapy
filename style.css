@@ -133,6 +133,39 @@ a:hover{text-decoration:underline}
   border-color:transparent;
 }
 
+/* Global language switcher (top-left) */
+.global-lang-switch{
+  position:fixed;
+  left:16px;
+  top:12px;
+  display:flex;
+  gap:8px;
+  z-index:1000;
+  background:rgba(247,241,236,.92);
+  backdrop-filter:saturate(120%) blur(8px);
+  padding:6px 8px;
+  border-radius:999px;
+  border:1px solid rgba(46,46,46,.08);
+  box-shadow:var(--shadow-sm);
+}
+.global-lang-switch .lang-btn{
+  background:transparent;
+  border:1.5px solid rgba(46,46,46,.18);
+  border-radius:999px;
+  padding:.25rem .6rem;
+  font-weight:800;
+  font-size:.85rem;
+  line-height:1;
+  color:var(--ink);
+  cursor:pointer;
+}
+.global-lang-switch .lang-btn[aria-pressed="true"],
+.global-lang-switch .lang-btn.active{
+  background:var(--lav);
+  color:#fff;
+  border-color:transparent;
+}
+
 /* Hero */
 .hero-section{padding:clamp(36px,7vw,96px) 0;background:
   radial-gradient(800px 300px at 80% -10%, rgba(166,138,200,.18), transparent),
