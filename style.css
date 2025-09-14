@@ -113,6 +113,26 @@ a:hover{text-decoration:underline}
 .nav .menu a{font-weight:600}
 .nav .menu .divider{width:1px;height:22px;background:rgba(46,46,46,.15);margin-inline:2px}
 
+/* Language switcher */
+.nav .menu .lang-switch{display:flex;align-items:center;gap:8px}
+.nav .menu .lang-switch .lang-btn{
+  background:transparent;
+  border:1.5px solid rgba(46,46,46,.18);
+  border-radius:999px;
+  padding:.25rem .6rem;
+  font-weight:800;
+  font-size:.85rem;
+  line-height:1;
+  color:var(--ink);
+  cursor:pointer;
+}
+.nav .menu .lang-switch .lang-btn[aria-pressed="true"],
+.nav .menu .lang-switch .lang-btn.active{
+  background:var(--lav);
+  color:#fff;
+  border-color:transparent;
+}
+
 /* Hero */
 .hero-section{padding:clamp(36px,7vw,96px) 0;background:
   radial-gradient(800px 300px at 80% -10%, rgba(166,138,200,.18), transparent),
