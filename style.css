@@ -125,6 +125,10 @@ a:hover{text-decoration:underline}
 .video-hero .video-frame{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);background:#000}
 .video-hero .video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover}
 
+/* About Gallery */
+.about-gallery .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(8px,1.6vw,12px)}
+.about-gallery .gallery img{width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:var(--radius-sm);box-shadow:var(--shadow-sm)}
+
 /* Services */
 .service .meta{display:flex;gap:8px;margin-top:8px}
 .pill{display:inline-block;padding:.2rem .6rem;border-radius:999px;background:rgba(166,138,200,.12);color:#4b3f5f;font-weight:600;font-size:.9rem}
