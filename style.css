@@ -65,6 +65,7 @@ a:hover{text-decoration:underline}
 .muted{color:var(--muted)}
 .price{font-size:var(--fs-3);color:var(--ink)}
 .visually-hidden{position:absolute!important;width:1px;height:1px;margin:-1px;border:0;padding:0;clip:rect(0 0 0 0);overflow:hidden}
+.ltr{direction:ltr;unicode-bidi:bidi-override}
 
 /* Buttons */
 .btn{display:inline-block;border:0;border-radius:999px;font-weight:700;padding:.9rem 1.25rem;cursor:pointer;transition:transform .06s ease, box-shadow .2s ease}
