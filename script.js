@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function(){
       'form.sent': "Thank you! Your message was sent. We'll get back to you shortly.",
 
       'location.title': 'Location & hours',
-      'location.address': 'Address: _________, Israel • Accessible parking • Wheelchair access by arrangement',
+      'location.address': 'Address: שיבת ציון 24 חיפה • Accessible parking • Wheelchair access by arrangement',
       'location.hours': "<strong>Hours</strong><br> Sun–Thu 09:00–19:00 • Fri 09:00–13:00",
       'map.title': 'Map',
 
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function(){
       'form.sent': 'תודה! ההודעה נשלחה. נחזור אליכם בהקדם.',
 
       'location.title': 'מיקום ושעות',
-      'location.address': 'כתובת: _________, ישראל • חניה נגישה • נגישות לנכים לפי תיאום',
+      'location.address': 'כתובת: שיבת ציון 24 חיפה • חניה נגישה • נגישות לנכים לפי תיאום',
       'location.hours': "<strong>שעות פעילות</strong><br> א'–ה' 9:00–19:00 • ו' 9:00–13:00",
       'map.title': 'מפה',
 
@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', function(){
       'form.sent': 'شكرًا! تم إرسال رسالتك. سنعاود الاتصال بك قريبًا.',
 
       'location.title': 'الموقع وساعات العمل',
-      'location.address': 'العنوان: _________، إسرائيل • موقف سيارات ميسّر • إمكانية وصول للكراسي المتحركة بالتنسيق',
+      'location.address': 'العنوان: שיבת ציון 24 חיפה • موقف سيارات ميسّر • إمكانية وصول للكراسي المتحركة بالتنسيق',
       'location.hours': '<strong>ساعات العمل</strong><br> الأحد–الخميس 09:00–19:00 • الجمعة 09:00–13:00',
       'map.title': 'خريطة',
 
