@@ -279,7 +279,7 @@ input:focus,textarea:focus{border-color:var(--lav);box-shadow:0 0 0 4px rgba(166
   right:16px;
   bottom:calc(72px + env(safe-area-inset-bottom, 0px));
   display:flex;
-  flex-direction:column-reverse; /* keeps WhatsApp at bottom like before */
+  flex-direction:column; /* Instagram on top, WhatsApp below */
   gap:16px;
   z-index:1000;
 }
