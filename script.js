@@ -479,6 +479,18 @@ document.addEventListener('DOMContentLoaded', function(){
     updateYear();
   }
 
+  // Provide a global helper for explicit English switch from inline HTML
+  window.switchToEnglish = function(){
+    setLang('en');
+    // Close mobile menu if open
+    var header = document.querySelector('.site-header');
+    var tgl = document.querySelector('.nav-toggle');
+    if (header && header.classList.contains('open')){
+      header.classList.remove('open');
+      if (tgl) tgl.setAttribute('aria-expanded','false');
+    }
+  };
+
   // Bind language buttons
   document.querySelectorAll('.lang-btn').forEach(function(btn){
     btn.addEventListener('click', function(){
