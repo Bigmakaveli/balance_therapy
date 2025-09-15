@@ -124,16 +124,16 @@ a:hover{text-decoration:underline}
   z-index:120;
 }
 .site-header .brand .logo{
-  width:56px;
-  height:56px;
-  flex:0 0 56px;
+  width:68px;
+  height:68px;
+  flex:0 0 68px;
   border-radius:12px;
 }
 .site-header .brand .brand-text strong{
-  font-size:clamp(1.25rem, 2.4vw, 1.75rem);
+  font-size:clamp(1.35rem, 2.8vw, 2rem);
 }
 .site-header .brand .brand-text small{
-  font-size:clamp(1rem, 1.6vw, 1.1rem);
+  font-size:clamp(1.05rem, 1.8vw, 1.2rem);
 }
 
 /* Language switcher */
@@ -190,17 +190,17 @@ a:hover{text-decoration:underline}
 }
 
 /* Hero */
-.hero-section{padding:clamp(36px,7vw,96px) 0;background:
+.hero-section{padding:clamp(44px,8vw,112px) 0;background:
   radial-gradient(800px 300px at 80% -10%, rgba(166,138,200,.18), transparent),
   radial-gradient(700px 400px at -10% 10%, rgba(43,177,168,.15), transparent)}
-.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
-.hero-text h1{font-family:var(--font-heading);font-size:var(--fs-1);margin:.4em 0}
-.hero-text .lead{color:var(--muted);font-size:clamp(16px,2vw,20px)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
+.hero-text h1{font-family:var(--font-heading);font-size:calc(var(--fs-1) * 1.15);margin:.4em 0}
+.hero-text .lead{color:var(--muted);font-size:clamp(18px,2.4vw,22px)}
 .cta-row{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1rem}
 
 /* Intro Video */
 .video-hero .video-frame{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);background:#000}
-.video-hero .video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover}
+.video-hero .video{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:cover}
 
 /* About Gallery */
 /* Make About cards fit content height and avoid stretched equal heights */
@@ -223,16 +223,16 @@ a:hover{text-decoration:underline}
 /* Enlarge the top service card only */
 section#services .grid .card.service:first-child{
   grid-column: 1 / -1; /* take full width on desktop */
-  padding: clamp(28px, 3.2vw, 48px); /* extra breathing room */
-  min-height: clamp(260px, 28vh, 380px); /* visibly taller hero-like card */
+  padding: clamp(32px, 3.6vw, 56px); /* extra breathing room */
+  min-height: clamp(320px, 32vh, 460px); /* visibly taller hero-like card */
 }
 
 section#services .grid .card.service:first-child h3{
-  font-size: calc(var(--fs-3) * 1.35);
+  font-size: calc(var(--fs-3) * 1.5);
 }
 
 section#services .grid .card.service:first-child p{
-  font-size: calc(var(--fs-4) * 1.15);
+  font-size: calc(var(--fs-4) * 1.2);
 }
 
 section#services .grid .card.service:first-child .meta{
@@ -257,50 +257,50 @@ section#services .grid .card.service:first-child .cta-row .btn:not(.translate-bu
 /* Shrink .translate-button to be compact (globally and inside top card) */
 .translate-button,
 .btn.translate-button{
-  padding: .35rem .6rem;
-  font-size: 12px;
+  padding: .28rem .5rem;
+  font-size: 11px;
   line-height: 1.1;
   border-radius: 999px;
 }
 .translate-button svg,
 .translate-button img{
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
 }
 .translate-button .icon,
 .translate-button i{
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1;
 }
 /* Ensure the top service card uses the compact translate button */
 section#services .grid .card.service:first-child .translate-button{
-  padding: .35rem .6rem;
-  font-size: 12px;
+  padding: .28rem .5rem;
+  font-size: 11px;
 }
 
 /* Responsive refinement */
 @media (max-width: 980px){
   section#services .grid .card.service:first-child{
     grid-column: 1 / -1; /* full width in 2-col layout */
-    min-height: clamp(220px, 26vh, 340px);
+    min-height: clamp(260px, 30vh, 420px);
   }
 }
 
 @media (max-width: 760px){
   section#services .grid .card.service:first-child{
-    padding: clamp(18px, 4.5vw, 28px);
+    padding: clamp(20px, 5vw, 32px);
     min-height: auto; /* let content define height on small screens */
   }
   section#services .grid .card.service:first-child h3{
-    font-size: calc(var(--fs-3) * 1.18);
+    font-size: calc(var(--fs-3) * 1.24);
   }
   section#services .grid .card.service:first-child p{
-    font-size: calc(var(--fs-4) * 1.08);
+    font-size: calc(var(--fs-4) * 1.12);
   }
   /* Keep translate button compact on mobile */
   section#services .grid .card.service:first-child .translate-button{
-    font-size: 12px;
-    padding: .3rem .55rem;
+    font-size: 11px;
+    padding: .26rem .5rem;
   }
 }
 
@@ -461,12 +461,12 @@ h3{font-size:var(--fs-3)}
     box-shadow:var(--shadow-sm);
   }
   .site-header .brand .logo{
-    width:48px;height:48px;flex:0 0 48px;
+    width:56px;height:56px;flex:0 0 56px;
   }
   .site-header .brand .brand-text strong{
-    font-size:1.15rem;
+    font-size:1.25rem;
   }
   .site-header .brand .brand-text small{
-    font-size:.92rem;
+    font-size:1rem;
   }
 }
