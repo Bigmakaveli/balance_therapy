@@ -737,6 +737,31 @@ document.addEventListener('DOMContentLoaded', function(){
     startTimer();
   })();
 
+  // WhatsApp FAB deep-link with fallback
+  var waFab = document.querySelector('.wa-fab-circle');
+  if (waFab) {
+    waFab.addEventListener('click', function(e){
+      var isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      if (!isMobile) return;
+      e.preventDefault();
+      var deep = 'whatsapp://send?phone=972506364387';
+      var web = this.getAttribute('href') || 'https://wa.me/972506364387';
+      var fallbackTimer = setTimeout(function(){
+        if (!document.hidden) { window.location.href = web; }
+      }, 800);
+      var clear = function(){
+        clearTimeout(fallbackTimer);
+        document.removeEventListener('visibilitychange', clear, true);
+        window.removeEventListener('pagehide', clear, true);
+        window.removeEventListener('blur', clear, true);
+      };
+      document.addEventListener('visibilitychange', clear, true);
+      window.addEventListener('pagehide', clear, true);
+      window.addEventListener('blur', clear, true);
+      window.location.href = deep;
+    });
+  }
+
   // Ensure year is set (in case the footer was re-rendered during i18n)
   updateYear();
 });
