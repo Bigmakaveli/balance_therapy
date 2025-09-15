@@ -253,6 +253,23 @@ input:focus,textarea:focus{border-color:var(--lav);box-shadow:0 0 0 4px rgba(166
 .insta-fab:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .insta-fab svg{width:26px;height:26px;display:block}
 
+/* WhatsApp circular FAB (same size/shape as Instagram) */
+.wa-fab-circle{
+  position:fixed;
+  right:16px;
+  bottom:calc(16px + env(safe-area-inset-bottom, 0px)); /* same base as insta-fab, overridden in stack */
+  width:56px;height:56px;border-radius:50%;
+  display:grid;place-items:center;
+  color:#fff;
+  background:linear-gradient(45deg, #128C7E, #25D366);
+  box-shadow:0 10px 20px rgba(0,0,0,.18);
+  z-index:1000;
+  transition:transform .15s ease, box-shadow .2s ease;
+}
+.wa-fab-circle:hover{transform:translateY(-1px);box-shadow:0 14px 28px rgba(0,0,0,.22);text-decoration:none}
+.wa-fab-circle:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.wa-fab-circle svg{width:26px;height:26px;display:block}
+
 /* Headings */
 h1,h2,h3{font-family:var(--font-heading);margin:.2em 0 .6em}
 h1{font-size:var(--fs-1)}
