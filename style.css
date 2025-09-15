@@ -116,24 +116,24 @@ a:hover{text-decoration:underline}
 /* Emphasized brand card in header */
 .site-header .brand{
   background:var(--card);
-  padding:.55rem .85rem;
+  padding:.7rem 1.05rem;
   border-radius:14px;
-  box-shadow:var(--shadow);
-  transform:translateY(-8px);
+  box-shadow:0 8px 22px rgba(0,0,0,.10), 0 0 0 1px rgba(46,46,46,.06);
+  transform:translateY(-14px);
   position:relative;
-  z-index:40;
+  z-index:120;
 }
 .site-header .brand .logo{
-  width:48px;
-  height:48px;
-  flex:0 0 48px;
+  width:56px;
+  height:56px;
+  flex:0 0 56px;
   border-radius:12px;
 }
 .site-header .brand .brand-text strong{
-  font-size:clamp(1.15rem, 2.2vw, 1.55rem);
+  font-size:clamp(1.25rem, 2.4vw, 1.75rem);
 }
 .site-header .brand .brand-text small{
-  font-size:clamp(.95rem, 1.6vw, 1.05rem);
+  font-size:clamp(1rem, 1.6vw, 1.1rem);
 }
 
 /* Language switcher */
@@ -372,16 +372,17 @@ h3{font-size:var(--fs-3)}
 
   /* Header brand card – mobile tweaks */
   .site-header .brand{
-    transform:translateY(-6px);
-    padding:.5rem .75rem;
+    transform:translateY(-4px);
+    padding:.45rem .7rem;
+    box-shadow:var(--shadow-sm);
   }
   .site-header .brand .logo{
-    width:44px;height:44px;flex:0 0 44px;
+    width:48px;height:48px;flex:0 0 48px;
   }
   .site-header .brand .brand-text strong{
-    font-size:1.25rem;
+    font-size:1.15rem;
   }
   .site-header .brand .brand-text small{
-    font-size:.95rem;
+    font-size:.92rem;
   }
 }
