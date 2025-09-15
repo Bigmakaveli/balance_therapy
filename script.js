@@ -95,7 +95,8 @@ document.addEventListener('DOMContentLoaded', function(){
       'footer.rights': 'All rights reserved',
 
       'sticky.cta': 'Book now',
-      'social.instagram': 'Open Balance Therapy on Instagram'
+      'social.instagram': 'Open Balance Therapy on Instagram',
+      'social.whatsapp': 'Open WhatsApp chat with us'
     },
     he: {
       skip: 'דלג לתוכן הראשי',
@@ -189,7 +190,8 @@ document.addEventListener('DOMContentLoaded', function(){
       'footer.rights': 'כל הזכויות שמורות',
 
       'sticky.cta': 'קבעו תור עכשיו',
-      'social.instagram': 'פתח אינסטגרם של Balance Therapy'
+      'social.instagram': 'פתח אינסטגרם של Balance Therapy',
+      'social.whatsapp': 'פתח צ׳אט וואטסאפ איתנו'
     },
     ar: {
       skip: 'تخطي إلى المحتوى الرئيسي',
@@ -283,7 +285,8 @@ document.addEventListener('DOMContentLoaded', function(){
       'footer.rights': 'جميع الحقوق محفوظة',
 
       'sticky.cta': 'احجز الآن',
-      'social.instagram': 'افتح صفحة Balance Therapy على إنستغرام'
+      'social.instagram': 'افتح صفحة Balance Therapy على إنستغرام',
+      'social.whatsapp': 'افتح محادثة واتساب معنا'
     }
   };
 
@@ -463,6 +466,7 @@ document.addEventListener('DOMContentLoaded', function(){
     // Sticky CTA + socials
     setText('.sticky-cta .btn','sticky.cta');
     setAttr('.insta-fab','aria-label','social.instagram');
+    setAttr('.wa-fab-circle','aria-label','social.whatsapp');
 
     // Update language switch UI
     updateLangButtons();
