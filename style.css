@@ -220,6 +220,64 @@ a:hover{text-decoration:underline}
 .service .meta{display:flex;gap:8px;margin-top:8px}
 .pill{display:inline-block;padding:.2rem .6rem;border-radius:999px;background:rgba(166,138,200,.12);color:#4b3f5f;font-weight:600;font-size:.9rem}
 
+/* Enlarge the top service card only */
+section#services .grid .card.service:first-child{
+  grid-column: span 2; /* wider on desktop/tablet */
+  padding: clamp(22px, 2.6vw, 36px); /* more breathing room */
+}
+
+section#services .grid .card.service:first-child h3{
+  font-size: calc(var(--fs-3) * 1.2);
+}
+
+section#services .grid .card.service:first-child p{
+  font-size: calc(var(--fs-4) * 1.1);
+}
+
+section#services .grid .card.service:first-child .meta{
+  gap: 10px;
+}
+
+section#services .grid .card.service:first-child .pill{
+  font-size: 1rem;
+  padding: .3rem .75rem;
+}
+
+section#services .grid .card.service:first-child .cta-row{
+  margin-top: 1.1rem;
+}
+
+/* Enlarge CTA inside the top card, but exclude any .translate-button */
+section#services .grid .card.service:first-child .cta-row .btn:not(.translate-button){
+  padding: 1rem 1.35rem;
+  font-size: 1rem;
+}
+
+/* Keep .translate-button dimensions unchanged if present */
+section#services .grid .card.service:first-child .translate-button{
+  font-size: 14px;
+  padding: .55rem .9rem;
+}
+
+/* Responsive refinement */
+@media (max-width: 980px){
+  section#services .grid .card.service:first-child{
+    grid-column: span 2; /* full width in 2-col layout */
+  }
+}
+
+@media (max-width: 760px){
+  section#services .grid .card.service:first-child{
+    padding: clamp(20px, 4vw, 28px);
+  }
+  section#services .grid .card.service:first-child h3{
+    font-size: calc(var(--fs-3) * 1.1);
+  }
+  section#services .grid .card.service:first-child p{
+    font-size: calc(var(--fs-4) * 1.05);
+  }
+}
+
 /* Lists and process */
 .list{margin:0;padding:0;list-style:none;display:grid;gap:.5rem}
 .list li{position:relative;padding-inline-start:26px}
