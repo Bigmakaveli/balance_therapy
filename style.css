@@ -270,6 +270,24 @@ input:focus,textarea:focus{border-color:var(--lav);box-shadow:0 0 0 4px rgba(166
 .wa-fab-circle:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .wa-fab-circle svg{width:26px;height:26px;display:block}
 
+/* Floating FAB stack: place FABs vertically */
+.fab-stack{
+  position:fixed;
+  right:16px;
+  bottom:calc(72px + env(safe-area-inset-bottom, 0px));
+  display:flex;
+  flex-direction:column-reverse; /* keeps WhatsApp at bottom like before */
+  gap:16px;
+  z-index:1000;
+}
+/* Reset positioning when inside the stack container */
+.fab-stack .insta-fab,
+.fab-stack .wa-fab-circle{
+  position:static;
+  right:auto;
+  bottom:auto;
+}
+
 /* Headings */
 h1,h2,h3{font-family:var(--font-heading);margin:.2em 0 .6em}
 h1{font-size:var(--fs-1)}
