@@ -157,8 +157,8 @@ a:hover{text-decoration:underline}
   border-color:transparent;
 }
 
-/* Global language switcher (inside hero, absolute top-right) */
-.global-lang-switch{
+/* Language switcher (inside hero, static top-left) */
+.lang-switcher{
   display:inline-flex;
   gap:8px;
   background:rgba(247,241,236,.92);
@@ -167,10 +167,10 @@ a:hover{text-decoration:underline}
   border-radius:999px;
   border:1px solid rgba(46,46,46,.08);
   box-shadow:var(--shadow-sm);
-  position:absolute;
-  inset-block-start:24px;
-  inset-inline-end:24px;
-  z-index:40;
+  position:static;
+  margin-top:24px;
+  margin-left:24px;
+  z-index:1;
 }
 
 /* Row wrapper to align the switch to the right under the header */
@@ -179,7 +179,7 @@ a:hover{text-decoration:underline}
   justify-content:flex-end; /* RTL-friendly: aligns to the right edge */
   margin-top:8px;
 }
-.global-lang-switch .lang-btn{
+.lang-switcher .lang-btn{
   background:transparent;
   border:1.5px solid rgba(46,46,46,.18);
   border-radius:999px;
@@ -190,8 +190,8 @@ a:hover{text-decoration:underline}
   color:var(--ink);
   cursor:pointer;
 }
-.global-lang-switch .lang-btn[aria-pressed="true"],
-.global-lang-switch .lang-btn.active{
+.lang-switcher .lang-btn[aria-pressed="true"],
+.lang-switcher .lang-btn.active{
   background:var(--lav);
   color:#fff;
   border-color:transparent;
@@ -521,11 +521,11 @@ h3{font-size:var(--fs-3)}
 
   /* Language switcher mobile compact spacing (non-sticky) */
   .lang-row{ justify-content:flex-end; }
-  .global-lang-switch{
+  .lang-switcher{
     gap: 6px;
     flex-wrap: wrap;
   }
-  .global-lang-switch .lang-btn{
+  .lang-switcher .lang-btn{
     padding: .3rem .6rem;
     font-size: .78rem;
   }
