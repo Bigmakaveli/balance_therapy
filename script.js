@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', function(){
       'services.naturopath.level': 'Personal',
       'services.naturopath.duration': 'In‑clinic/online',
 
-      'offer.title': 'Offer of the month',
-      'offer.copy': '<strong>Pampering combined treatment (50 min)</strong> — Head‑shoulders‑back massage + reflexology for deep relaxation.',
+      'offer.title': 'Premium package — 8 sessions',
+      'offer.copy': '<strong>90 min combined body massage + reflexology</strong> — full therapeutic deal, includes 8 sessions.',
       'offer.li1': 'Let go of tension and mental overload',
       'offer.li2': 'Improve blood flow and deeper breathing',
       'offer.li3': 'Reconnect with your body and inner calm',
@@ -197,8 +197,8 @@ document.addEventListener('DOMContentLoaded', function(){
       'services.naturopath.level': 'אישי',
       'services.naturopath.duration': 'מפגש/און‑ליין',
 
-      'offer.title': 'מבצע החודש',
-      'offer.copy': '<strong>טיפול משולב מפנק (50 דק’)</strong> — עיסוי ראש, כתפיים וגב + רפלקסולוגיה לאיזון והרגעה עמוקה.',
+      'offer.title': 'חבילת פרימיום — 8 טיפולים',
+      'offer.copy': '<strong>90 דקות משולב עיסוי גוף ורפלקסולוגיה</strong> — עסקה טיפולית מלאה, כולל 8 טיפולים.',
       'offer.li1': 'שחרור מתחים ועמוסי מחשבה',
       'offer.li2': 'שיפור זרימת דם ועומק נשימה',
       'offer.li3': 'חיבור לגוף ולשקט פנימי',
@@ -322,8 +322,8 @@ document.addEventListener('DOMContentLoaded', function(){
       'services.naturopath.level': 'شخصي',
       'services.naturopath.duration': 'حضوري/عن بُعد',
 
-      'offer.title': 'عرض الشهر',
-      'offer.copy': '<strong>علاج مُدمج مُدلل (50 دقيقة)</strong> — تدليك الرأس والكتفين والظهر + رفلكسولوجيا لاسترخاء عميق.',
+      'offer.title': 'باقة بريميوم — 8 جلسات',
+      'offer.copy': '<strong>90 دقيقة علاج مدمج (تدليك جسم + رفلكسولوجيا)</strong> — صفقة علاجية كاملة، تشمل 8 جلسات.',
       'offer.li1': 'التخلص من التوتر وفرط التفكير',
       'offer.li2': 'تحسين تدفق الدم وعمق التنفس',
       'offer.li3': 'العودة إلى الجسد وإلى الهدوء الداخلي',
