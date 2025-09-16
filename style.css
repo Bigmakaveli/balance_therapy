@@ -166,6 +166,34 @@ a:hover{text-decoration:underline}
   font-size:clamp(1.05rem, 1.8vw, 1.2rem);
 }
 
+/* Stack brand title and subtitle above the logo */
+.header-top .brand-stack{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  gap:6px;
+}
+.header-top .brand-stack .brand-text{
+  line-height:1.05;
+}
+.header-top .brand-stack .brand-text strong{
+  line-height:1.1;
+}
+.header-top .brand-stack .brand-text small{
+  color:var(--muted);
+}
+
+/* Tweak logo size when stacked under text */
+.brand-stack .site-logo{
+  width: clamp(64px, 9vw, 96px);
+  aspect-ratio: 1 / 1;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 2px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+
 /* Language switcher */
 .nav .menu .lang-switch{display:flex;align-items:center;gap:8px}
 .nav .menu .lang-switch .lang-btn{
