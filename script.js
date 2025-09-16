@@ -429,7 +429,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
     // Contact section
     setText('#contact-title','contact.title');
-    var contactFirstP = document.querySelector('#contact .container .card p');
+    var contactCard = document.getElementById('contact-title') ? document.getElementById('contact-title').closest('.card') : null;
+    var contactFirstP = contactCard ? contactCard.querySelector('p') : null;
     if (contactFirstP){
       contactFirstP.innerHTML = t('contact.phoneLabel') + ' ' +
         '<a href="https://wa.me/972506364387"><span class="ltr">+972 50-636-4387</span></a>';
@@ -441,11 +442,15 @@ document.addEventListener('DOMContentLoaded', function(){
     setText('#contact-form .form-note','form.note');
 
     // Location card
-    setText('section#contact .card:nth-child(2) h3','location.title');
-    var locPs = document.querySelectorAll('section#contact .card:nth-child(2) p');
+    setText('#location-title','location.title');
+    var locCard = document.getElementById('location-title') ? document.getElementById('location-title').closest('.card') : null;
+    var locPs = locCard ? locCard.querySelectorAll('p') : [];
     if (locPs[0]) locPs[0].textContent = t('location.address');
     if (locPs[1]) locPs[1].innerHTML = t('location.hours');
-    setAttr('section#contact .card:nth-child(2) iframe','title','map.title');
+    if (locCard){
+      var map = locCard.querySelector('iframe');
+      if (map){ map.setAttribute('title', t('map.title')); }
+    }
 
     // Book section
     setText('#book .card h2','book.title');
