@@ -163,7 +163,8 @@ a:hover{text-decoration:underline}
   gap:8px;
   background:rgba(247,241,236,.92);
   backdrop-filter:saturate(120%) blur(8px);
-  padding:0 8px 6px 8px;
+  padding:6px 12px;
+  margin-bottom:8px;
   border-radius:999px;
   border:1px solid rgba(46,46,46,.08);
   box-shadow:var(--shadow-sm);
@@ -489,14 +490,14 @@ input:focus,textarea:focus{border-color:var(--lav);box-shadow:0 0 0 4px rgba(166
   inset-inline-start: auto;
   inset-inline-end: auto;
   transform: none !important;
-  margin: 0;
+  margin: 0 0 8px 0;
   z-index: 10;
   direction: ltr;
 }
 
 /* Responsive tweak: keep compact offset on small screens */
 @media (max-width:760px){
-  .language-switcher{ left: 16px; }
+  .language-switcher{ left: 16px; margin-bottom: 6px; }
 }
 
 /* Headings */
