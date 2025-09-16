@@ -778,6 +778,59 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
 
+  // Emoji burst from the logo on load
+  (function(){
+    var logo = document.getElementById('logo');
+    if (!logo) return;
+
+    // Slight delay to ensure layout is stable
+    setTimeout(function(){
+      var rect = logo.getBoundingClientRect();
+      var originX = rect.left + rect.width / 2;
+      var originY = rect.top + rect.height / 2;
+
+      var count = 10;
+      for (var i = 0; i < count; i++){
+        (function(i){
+          setTimeout(function(){
+            var el = document.createElement('span');
+            el.className = 'emoji-burst';
+            el.setAttribute('aria-hidden', 'true');
+            el.textContent = '💆‍♀️';
+
+            // Random trajectory
+            var angle = Math.random() * Math.PI * 2;
+            var distance = 350 + Math.random() * 300;
+            var dx = Math.cos(angle) * distance;
+            var dy = Math.sin(angle) * distance;
+
+            // Start at logo center (viewport coords for fixed positioning)
+            el.style.left = originX + 'px';
+            el.style.top = originY + 'px';
+
+            // Personalize animation via CSS vars
+            el.style.setProperty('--dx', dx.toFixed(2) + 'px');
+            el.style.setProperty('--dy', dy.toFixed(2) + 'px');
+            el.style.setProperty('--rot', (Math.random() * 540 - 270).toFixed(1) + 'deg');
+
+            // Variation
+            el.style.fontSize = (18 + Math.random() * 12).toFixed(0) + 'px';
+            el.style.animationDuration = '3s';
+            el.style.animationDelay = (Math.random() * 250).toFixed(0) + 'ms';
+
+            document.body.appendChild(el);
+
+            var cleanup = function(){
+              if (el && el.parentNode) el.parentNode.removeChild(el);
+            };
+            el.addEventListener('animationend', cleanup, { once: true });
+            setTimeout(cleanup, 3600); // safety cleanup
+          }, i * 60); // subtle stagger
+        })(i);
+      }
+    }, 150);
+  })();
+
   // Ensure year is set (in case the footer was re-rendered during i18n)
   updateYear();
 });
