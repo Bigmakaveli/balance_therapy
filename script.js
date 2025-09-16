@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
       'location.title': 'Location & hours',
       'location.address': 'Address: שיבת ציון 24 חיפה • Accessible parking • Wheelchair access by arrangement',
-      'location.hours': "<strong>Hours</strong><br> من الساعة 5 إلى الساعة 10",
+      'location.hours': "<strong>Hours</strong><br> מ-5 עד 10",
       'map.title': 'Map',
 
       'book.title': 'Book an appointment',
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
       'location.title': 'מיקום ושעות',
       'location.address': 'כתובת: שיבת ציון 24 חיפה • חניה נגישה • נגישות לנכים לפי תיאום',
-      'location.hours': "<strong>שעות פעילות</strong><br> من الساعة 5 إلى الساعة 10",
+      'location.hours': "<strong>שעות פעילות</strong><br> מ-5 עד 10",
       'map.title': 'מפה',
 
       'book.title': 'קביעת תור',
@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
       'location.title': 'الموقع وساعات العمل',
       'location.address': 'العنوان: שיבת ציון 24 חיפה • موقف سيارات ميسّر • إمكانية وصول للكراسي المتحركة بالتنسيق',
-      'location.hours': '<strong>ساعات العمل</strong><br> من الساعة 5 إلى الساعة 10',
+      'location.hours': '<strong>ساعات العمل</strong><br> מ-5 עד 10',
       'map.title': 'خريطة',
 
       'book.title': 'حجز موعد',
