@@ -13,11 +13,6 @@
 <body>
 
   <a class="skip-link" href="#main">דלג לתוכן הראשי</a>
-  <div class="global-lang-switch" role="group" aria-label="Language switcher">
-    <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">عر</button>
-    <button type="button" class="lang-btn" data-lang="he" aria-pressed="false">עב</button>
-    <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" onclick="switchToEnglish()">EN</button>
-  </div>
 
   <header class="site-header" role="banner">
     <div class="container header-wrap">
@@ -29,11 +24,19 @@
         </span>
       </a>
 
-      <button class="nav-toggle" aria-label="פתח/סגור תפריט" aria-controls="nav-menu" aria-expanded="false">
-        <span class="bar" aria-hidden="true"></span>
-        <span class="bar" aria-hidden="true"></span>
-        <span class="bar" aria-hidden="true"></span>
-      </button>
+      <div class="header-actions">
+        <button class="nav-toggle" aria-label="פתח/סגור תפריט" aria-controls="nav-menu" aria-expanded="false">
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+          <span class="bar" aria-hidden="true"></span>
+        </button>
+
+        <div class="global-lang-switch header-lang-switch" role="group" aria-label="Language switcher">
+          <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">عر</button>
+          <button type="button" class="lang-btn" data-lang="he" aria-pressed="false">עב</button>
+          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" onclick="switchToEnglish()">EN</button>
+        </div>
+      </div>
 
       <nav class="nav" aria-label="ניווט ראשי">
         <ul id="nav-menu" class="menu">

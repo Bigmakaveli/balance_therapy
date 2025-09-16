@@ -189,6 +189,23 @@ a:hover{text-decoration:underline}
   border-color:transparent;
 }
 
+/* Header-embedded language switcher next to hamburger */
+.site-header .header-actions{display:flex;align-items:center;gap:12px}
+.site-header .header-lang-switch{
+  position:relative; /* keep overlay z-index within sticky header */
+  top:auto;
+  inset-inline-start:auto;
+  margin:0;
+  z-index:500;
+  box-shadow:var(--shadow-sm);
+}
+
+/* Extra-compact on very small screens */
+@media (max-width:420px){
+  .site-header .header-lang-switch{gap:6px;flex-wrap:wrap}
+  .site-header .header-lang-switch .lang-btn{padding:.26rem .5rem;font-size:.72rem}
+}
+
 /* Hero */
 .hero-section{padding:clamp(44px,8vw,112px) 0;background:
   radial-gradient(800px 300px at 80% -10%, rgba(166,138,200,.18), transparent),
