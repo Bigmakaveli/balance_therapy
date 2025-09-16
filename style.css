@@ -429,7 +429,7 @@ input:focus,textarea:focus{border-color:var(--lav);box-shadow:0 0 0 4px rgba(166
 .fab-stack{
   position:fixed;
   right:16px;
-  bottom:calc(72px + env(safe-area-inset-bottom, 0px)); /* lifted to avoid sticky CTA */
+  bottom:calc(16px + env(safe-area-inset-bottom, 0px)); /* safe-area bottom spacing */
   display:grid;
   grid-auto-flow:row;
   gap:8px; /* requested vertical spacing */
@@ -466,7 +466,7 @@ input:focus,textarea:focus{border-color:var(--lav);box-shadow:0 0 0 4px rgba(166
 .fab-stack{
   position:fixed;
   right:16px;
-  bottom:calc(72px + env(safe-area-inset-bottom, 0px));
+  bottom:calc(16px + env(safe-area-inset-bottom, 0px));
   display:flex;
   flex-direction:column; /* Instagram on top, WhatsApp below */
   gap:16px;
