@@ -477,6 +477,26 @@ input:focus,textarea:focus{border-color:var(--lav);box-shadow:0 0 0 4px rgba(166
   bottom:auto;
 }
 
+/* Language switcher placement: absolute top-left inside hero */
+.hero, .hero-section{ position: relative; }
+
+.language-switcher{
+  position: absolute !important;
+  top: 0;
+  left: 24px;
+  right: auto;
+  inset-inline-start: auto;
+  inset-inline-end: auto;
+  transform: none !important;
+  margin: 0;
+  z-index: 25;
+}
+
+/* Responsive tweak: keep compact offset on small screens */
+@media (max-width:760px){
+  .language-switcher{ left: 16px; }
+}
+
 /* Headings */
 h1,h2,h3{font-family:var(--font-heading);margin:.2em 0 .6em}
 h1{font-size:var(--fs-1)}
