@@ -157,7 +157,7 @@ a:hover{text-decoration:underline}
   border-color:transparent;
 }
 
-/* Global language switcher (below header, aligned to right) */
+/* Global language switcher (inside hero, absolute top-right) */
 .global-lang-switch{
   display:inline-flex;
   gap:8px;
@@ -167,7 +167,10 @@ a:hover{text-decoration:underline}
   border-radius:999px;
   border:1px solid rgba(46,46,46,.08);
   box-shadow:var(--shadow-sm);
-  position:static; /* not sticky */
+  position:absolute;
+  inset-block-start:24px;
+  inset-inline-end:24px;
+  z-index:40;
 }
 
 /* Row wrapper to align the switch to the right under the header */
@@ -212,7 +215,7 @@ a:hover{text-decoration:underline}
 }
 
 /* Hero */
-.hero-section{padding:clamp(44px,8vw,112px) 0;background:
+.hero-section{position:relative;padding:clamp(44px,8vw,112px) 0;background:
   radial-gradient(800px 300px at 80% -10%, rgba(166,138,200,.18), transparent),
   radial-gradient(700px 400px at -10% 10%, rgba(43,177,168,.15), transparent)}
 .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}
