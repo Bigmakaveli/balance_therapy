@@ -80,9 +80,9 @@ document.addEventListener('DOMContentLoaded', function(){
       'form.error': 'Please enter your name and message.',
       'form.sent': "Thank you! Your message was sent. We'll get back to you shortly.",
 
-      'location.title': 'Location & hours',
+      'location.title': 'Location & Opening Hours',
       'location.address': 'Address: שיבת ציון 24 חיפה • Accessible parking • Wheelchair access by arrangement',
-      'location.hours': "<strong>Hours</strong><br> מ-5 עד 10",
+      'location.hours': "<strong>Hours</strong><br> From 5 to 10",
       'map.title': 'Map',
 
       'book.title': 'Book an appointment',
