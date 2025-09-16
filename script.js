@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function(){
       'services.combo.level': 'פופולרי',
       'services.combo.duration': '90 דק’',
       'services.deep.title': 'עיסוי רקמות עמוקות',
-      'services.deep.desc': 'עיסוי לכל הגוף',
+      'services.deep.desc': 'עיסוי גוף שלם וטיפולי, לשחרור מתחים והרגשה של קלילות ואיזון.',
       'services.deep.level': 'עמוק',
       'services.deep.duration': '60 דקות',
       'services.naturopath.title': 'ייעוץ נטורופתי',
