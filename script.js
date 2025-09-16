@@ -226,7 +226,7 @@ document.addEventListener('DOMContentLoaded', function(){
       'services.combo.title': 'علاج لمسيّ مُدمج',
       'services.combo.desc': 'تدليك رأس‑كتفين‑ظهر + رفلكسولوجيا لاسترخاء عميق وتحرير الضغوط. مناسب للضغط النفسي والبدني.',
       'services.combo.level': 'شائع',
-      'services.combo.duration': '50–75 دقيقة',
+      'services.combo.duration': '40–60 دقيقة',
       'services.naturopath.title': 'استشارة ناتوروباثي',
       'services.naturopath.desc': 'تغذية مخصصة، مكمّلات وأدوات يومية — خطة شخصية لصحة متوازنة ومستقرة.',
       'services.naturopath.level': 'شخصي',
