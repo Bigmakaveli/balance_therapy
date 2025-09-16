@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function(){
       'offer.li1': 'שחרור מתחים ועמוסי מחשבה',
       'offer.li2': 'שיפור זרימת דם ועומק נשימה',
       'offer.li3': 'חיבור לגוף ולשקט פנימי',
-      'offer.price': 'מחיר היכרות: <strong>₪XXX</strong>',
+      'offer.price': 'מחיר חבילה: <strong>₪XXX</strong>',
       'offer.cta': 'להזמנה מיידית',
 
       'about.title': 'עליי',
