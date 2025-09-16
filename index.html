@@ -30,12 +30,6 @@
           <span class="bar" aria-hidden="true"></span>
           <span class="bar" aria-hidden="true"></span>
         </button>
-
-        <div class="global-lang-switch header-lang-switch" role="group" aria-label="Language switcher">
-          <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">عر</button>
-          <button type="button" class="lang-btn" data-lang="he" aria-pressed="false">עב</button>
-          <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" onclick="switchToEnglish()">EN</button>
-        </div>
       </div>
 
       <nav class="nav" aria-label="ניווט ראשי">
@@ -51,6 +45,12 @@
       </nav>
     </div>
   </header>
+
+  <div class="global-lang-switch floating-lang-switch" role="group" aria-label="Language switcher">
+    <button type="button" class="lang-btn" data-lang="ar" aria-pressed="false">عر</button>
+    <button type="button" class="lang-btn" data-lang="he" aria-pressed="false">עב</button>
+    <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" onclick="switchToEnglish()">EN</button>
+  </div>
 
   <main id="main">
     <section id="home" class="hero-section" aria-labelledby="hero-title">
