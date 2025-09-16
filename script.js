@@ -41,6 +41,32 @@ document.addEventListener('DOMContentLoaded', function(){
       'services.deep.desc': 'Full-body massage',
       'services.deep.level': 'Deep',
       'services.deep.duration': '60 min',
+
+      'services.hotstones.title': 'Hot Stones & Cupping',
+      'services.hotstones.desc': 'A pampering blend of warm volcanic stones and gentle air-cupping to release muscle tension, boost circulation, and lower stress — especially for back/neck discomfort and a “heavy” body feel.',
+      'services.hotstones.level': 'Calming',
+      'services.hotstones.duration': '60/90 min',
+      'services.hotstones.price': 'Price: <strong>₪260</strong> (60 min) / <strong>₪320</strong> (90 min)',
+      'services.hotstones.summary': 'Details: what’s included, prep and aftercare',
+      'services.hotstones.includesTitle': 'What’s included',
+      'services.hotstones.prepTitle': 'Before your session',
+      'services.hotstones.postTitle': 'After your session',
+      'services.hotstones.include1': 'Gradual warming of the body with smooth hot stones along deep muscle lines',
+      'services.hotstones.include2': 'Gentle cupping on focused areas to release adhesions and improve drainage',
+      'services.hotstones.include3': 'Brief breathwork to calm the nervous system',
+      'services.hotstones.include4': 'Closing with soothing touch for balance and grounding',
+      'services.hotstones.prep1': 'Avoid a heavy meal ~2 hours beforehand',
+      'services.hotstones.prep2': 'Arrive in comfortable clothing and remove jewelry',
+      'services.hotstones.prep3': 'Inform about sensitive skin/easy bruising or blood thinners',
+      'services.hotstones.post1': 'Hydrate and avoid very hot showers for the first 2 hours',
+      'services.hotstones.post2': 'Mild local redness may occur — usually fades within 24–48h',
+      'services.hotstones.post3': 'Listen to your body, rest, and avoid unusual exertion that day',
+      'services.hotstones.tagsLabel': 'Tags:',
+      'services.hotstones.tag1': 'Hot stones',
+      'services.hotstones.tag2': 'Cupping',
+      'services.hotstones.tag3': 'Relaxation',
+      'services.hotstones.tag4': 'Back pain',
+
       'services.naturopath.title': 'Naturopathic Consultation',
       'services.naturopath.desc': 'Personalized nutrition, supplements, and daily tools – a tailored plan for stable, balanced health.',
       'services.naturopath.level': 'Personal',
@@ -140,6 +166,32 @@ document.addEventListener('DOMContentLoaded', function(){
       'services.deep.desc': 'עיסוי גוף שלם וטיפולי, לשחרור מתחים והרגשה של קלילות ואיזון.',
       'services.deep.level': 'עמוק',
       'services.deep.duration': '60 דקות',
+
+      'services.hotstones.title': 'אבנים חמות וכוסות אוויר',
+      'services.hotstones.desc': 'שילוב מגע מפנק עם אבנים וולקניות חמות וכוסות אוויר עדינות, לשחרור שרירים, שיפור זרימת הדם והפחתת סטרס — מתאים במיוחד לכאבי גב וצוואר ולתחושת “כבדות” בגוף.',
+      'services.hotstones.level': 'מרגיע',
+      'services.hotstones.duration': '60/90 דק’',
+      'services.hotstones.price': 'מחיר: <strong>₪260</strong> (60 דק’) / <strong>₪320</strong> (90 דק’)',
+      'services.hotstones.summary': 'פרטים: מה כולל, הכנה ואחרי טיפול',
+      'services.hotstones.includesTitle': 'מה כולל הטיפול',
+      'services.hotstones.prepTitle': 'לפני הטיפול',
+      'services.hotstones.postTitle': 'אחרי הטיפול',
+      'services.hotstones.include1': 'חימום הדרגתי של הגוף בעזרת אבנים חמות לאורך השרירים העמוקים',
+      'services.hotstones.include2': 'כוסות אוויר עדינות לאזורים ממוקדים לשחרור הדבקויות ושיפור הניקוז',
+      'services.hotstones.include3': 'עבודה נשימתית קצרה להרגעה של מערכת העצבים',
+      'services.hotstones.include4': 'סיום במגע מרגיע לאיזון והארקה',
+      'services.hotstones.prep1': 'להימנע מארוחה כבדה כשעתיים לפני',
+      'services.hotstones.prep2': 'להגיע עם ביגוד נוח ולהסיר תכשיטים',
+      'services.hotstones.prep3': 'להודיע על עור רגיש/נוטה לשטפי דם או תרופות מדללות דם',
+      'services.hotstones.post1': 'לשתות מים ולהימנע ממקלחת חמה מאוד בשעתיים הראשונות',
+      'services.hotstones.post2': 'ייתכנו אודם מקומי קל — חולף לרוב תוך 24–48 שעות',
+      'services.hotstones.post3': 'להקשיב לגוף, לנוח, ולהימנע ממאמץ חריג באותו יום',
+      'services.hotstones.tagsLabel': 'תגיות:',
+      'services.hotstones.tag1': 'אבנים חמות',
+      'services.hotstones.tag2': 'כוסות אוויר',
+      'services.hotstones.tag3': 'הרפיה',
+      'services.hotstones.tag4': 'כאבי גב',
+
       'services.naturopath.title': 'ייעוץ נטורופתי',
       'services.naturopath.desc': 'תזונה מותאמת, תוספים וכלים יומיומיים – תכנית אישית לבריאות מאוזנת ויציבה.',
       'services.naturopath.level': 'אישי',
@@ -239,6 +291,32 @@ document.addEventListener('DOMContentLoaded', function(){
       'services.deep.desc': 'تدليك لكامل الجسم',
       'services.deep.level': 'عميق',
       'services.deep.duration': '60 دقيقة',
+
+      'services.hotstones.title': 'حجارة ساخنة وكؤوس هواء',
+      'services.hotstones.desc': 'مزيج مُدلّل من حجارة بركانية دافئة وكؤوس هواء لطيفة لتحرير شدّ العضلات، تعزيز الدورة الدموية وتقليل التوتر — مناسب خاصة لآلام الظهر/الرقبة والشعور بـ"ثِقَل" في الجسم.',
+      'services.hotstones.level': 'مُهدّئ',
+      'services.hotstones.duration': '60/90 دقيقة',
+      'services.hotstones.price': 'السعر: <strong>₪260</strong> (60 دقيقة) / <strong>₪320</strong> (90 دقيقة)',
+      'services.hotstones.summary': 'التفاصيل: المحتوى، التحضير وما بعد الجلسة',
+      'services.hotstones.includesTitle': 'ما الذي يتضمنه العلاج',
+      'services.hotstones.prepTitle': 'قبل الجلسة',
+      'services.hotstones.postTitle': 'بعد الجلسة',
+      'services.hotstones.include1': 'تسخين تدريجي للجسم بحجارة ساخنة ملساء على امتداد الأنسجة العميقة',
+      'services.hotstones.include2': 'كؤوس هواء لطيفة لمواضع محدّدة لتحرير الالتصاقات وتحسين التصريف',
+      'services.hotstones.include3': 'تنفّس قصير لتهدئة الجهاز العصبي',
+      'services.hotstones.include4': 'ختام بلمس مُريح للموازنة والأرضنة',
+      'services.hotstones.prep1': 'تجنّب وجبة ثقيلة قبل ~ساعتين',
+      'services.hotstones.prep2': 'الوصول بملابس مريحة وإزالة الإكسسوارات',
+      'services.hotstones.prep3': 'إبلاغنا عن بشرة حسّاسة/ميل للكدمات أو أدوية مميّعة للدم',
+      'services.hotstones.post1': 'اشرب الماء وتجنّب الاستحمام الساخن جدًا لأوّل ساعتين',
+      'services.hotstones.post2': 'قد يظهر احمرار موضعي خفيف — يزول عادة خلال 24–48 ساعة',
+      'services.hotstones.post3': 'استمع لجسمك، ارتَح وتجنّب مجهودًا غير اعتيادي في نفس اليوم',
+      'services.hotstones.tagsLabel': 'وسوم:',
+      'services.hotstones.tag1': 'حجارة ساخنة',
+      'services.hotstones.tag2': 'كؤوس هواء',
+      'services.hotstones.tag3': 'استرخاء',
+      'services.hotstones.tag4': 'آلام الظهر',
+
       'services.naturopath.title': 'استشارة ناتوروباثي',
       'services.naturopath.desc': 'تغذية مخصصة، مكمّلات وأدوات يومية — خطة شخصية لصحة متوازنة ومستقرة.',
       'services.naturopath.level': 'شخصي',
@@ -398,6 +476,51 @@ document.addEventListener('DOMContentLoaded', function(){
     setText('section#services .service:nth-child(3) p','services.deep.desc');
     setText('section#services .service:nth-child(3) .meta .pill:nth-child(1)','services.deep.level');
     setText('section#services .service:nth-child(3) .meta .pill:nth-child(2)','services.deep.duration');
+
+    // New: Hot stones & cupping (4th card)
+    setText('section#services .service:nth-child(4) h3','services.hotstones.title');
+    setText('section#services .service:nth-child(4) p.desc','services.hotstones.desc');
+    setText('section#services .service:nth-child(4) .meta .pill:nth-child(1)','services.hotstones.level');
+    setText('section#services .service:nth-child(4) .meta .pill:nth-child(2)','services.hotstones.duration');
+    setHTML('section#services .service:nth-child(4) .price','services.hotstones.price');
+    var hs = document.querySelector('section#services .service:nth-child(4) details.service-details');
+    if (hs){
+      var sum = hs.querySelector('summary');
+      if (sum) sum.textContent = t('services.hotstones.summary');
+      var incTitle = hs.querySelector('.includes-title strong');
+      if (incTitle) incTitle.textContent = t('services.hotstones.includesTitle');
+      var preTitle = hs.querySelector('.prep-title strong');
+      if (preTitle) preTitle.textContent = t('services.hotstones.prepTitle');
+      var postTitle = hs.querySelector('.post-title strong');
+      if (postTitle) postTitle.textContent = t('services.hotstones.postTitle');
+
+      var incLis = hs.querySelectorAll('.includes li');
+      if (incLis[0]) incLis[0].textContent = t('services.hotstones.include1');
+      if (incLis[1]) incLis[1].textContent = t('services.hotstones.include2');
+      if (incLis[2]) incLis[2].textContent = t('services.hotstones.include3');
+      if (incLis[3]) incLis[3].textContent = t('services.hotstones.include4');
+
+      var preLis = hs.querySelectorAll('.pre li');
+      if (preLis[0]) preLis[0].textContent = t('services.hotstones.prep1');
+      if (preLis[1]) preLis[1].textContent = t('services.hotstones.prep2');
+      if (preLis[2]) preLis[2].textContent = t('services.hotstones.prep3');
+
+      var postLis = hs.querySelectorAll('.post li');
+      if (postLis[0]) postLis[0].textContent = t('services.hotstones.post1');
+      if (postLis[1]) postLis[1].textContent = t('services.hotstones.post2');
+      if (postLis[2]) postLis[2].textContent = t('services.hotstones.post3');
+
+      var tagsLabel = hs.querySelector('.tags .tags-label');
+      if (tagsLabel) tagsLabel.textContent = t('services.hotstones.tagsLabel');
+      var tag1 = hs.querySelector('.tags .tag1');
+      if (tag1) tag1.textContent = t('services.hotstones.tag1');
+      var tag2 = hs.querySelector('.tags .tag2');
+      if (tag2) tag2.textContent = t('services.hotstones.tag2');
+      var tag3 = hs.querySelector('.tags .tag3');
+      if (tag3) tag3.textContent = t('services.hotstones.tag3');
+      var tag4 = hs.querySelector('.tags .tag4');
+      if (tag4) tag4.textContent = t('services.hotstones.tag4');
+    }
 
     document.querySelectorAll('section#services .service .cta-row a').forEach(function(a){
       a.textContent = t('cta.book');

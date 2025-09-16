@@ -304,6 +304,16 @@ a:hover{text-decoration:underline}
 .service .meta{display:flex;gap:8px;margin-top:8px}
 .pill{display:inline-block;padding:.2rem .6rem;border-radius:999px;background:rgba(166,138,200,.12);color:#4b3f5f;font-weight:600;font-size:.9rem}
 
+/* Service details (expandable) */
+.service-details{margin-top:8px}
+.service-details summary{
+  cursor:pointer;
+  color:var(--teal);
+  font-weight:800;
+  padding:.25rem 0;
+}
+.service-details .list{margin-top:6px}
+
 /* Enlarge the top service card only */
 section#services .grid .card.service:first-child{
   grid-column: 1 / -1; /* take full width on desktop */
