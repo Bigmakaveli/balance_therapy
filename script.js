@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function(){
       'form.sent': "Thank you! Your message was sent. We'll get back to you shortly.",
 
       'location.title': 'Location & Opening Hours',
-      'location.address': 'Address: שיבת ציון 24 חיפה • Accessible parking • Wheelchair access by arrangement',
+      'location.address': 'Address: שיבת ציון 26 חיפה • Accessible parking • Wheelchair access by arrangement',
       'location.hours': "<strong>Hours</strong><br> From 5 to 10",
       'map.title': 'Map',
 
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function(){
       'form.sent': 'תודה! ההודעה נשלחה. נחזור אליכם בהקדם.',
 
       'location.title': 'מיקום ושעות',
-      'location.address': 'כתובת: שיבת ציון 24 חיפה • חניה נגישה • נגישות לנכים לפי תיאום',
+      'location.address': 'כתובת: שיבת ציון 26 חיפה • חניה נגישה • נגישות לנכים לפי תיאום',
       'location.hours': "<strong>שעות פעילות</strong><br> מ-5 עד 10",
       'map.title': 'מפה',
 
@@ -271,7 +271,7 @@ document.addEventListener('DOMContentLoaded', function(){
       'form.sent': 'شكرًا! تم إرسال رسالتك. سنعاود الاتصال بك قريبًا.',
 
       'location.title': 'الموقع وساعات العمل',
-      'location.address': 'العنوان: שיבת ציון 24 חיפה • موقف سيارات ميسّر • إمكانية وصول للكراسي المتحركة بالتنسيق',
+      'location.address': 'العنوان: שיבת ציון 26 חיפה • موقف سيارات ميسّر • إمكانية وصول للكراسي المتحركة بالتنسيق',
       'location.hours': '<strong>ساعات العمل</strong><br> من 5 إلى 10',
       'map.title': 'خريطة',
 
