@@ -37,6 +37,10 @@ document.addEventListener('DOMContentLoaded', function(){
       'services.combo.desc': 'Integrated reflexology with focused neck, hands and scalp massage for deep relaxation, improved circulation and a calmer nervous system.',
       'services.combo.level': 'Popular',
       'services.combo.duration': '90 min',
+      'services.deep.title': 'Deep Tissue Massage',
+      'services.deep.desc': 'Full-body massage',
+      'services.deep.level': 'Deep',
+      'services.deep.duration': '60 min',
       'services.naturopath.title': 'Naturopathic Consultation',
       'services.naturopath.desc': 'Personalized nutrition, supplements, and daily tools – a tailored plan for stable, balanced health.',
       'services.naturopath.level': 'Personal',
@@ -132,6 +136,10 @@ document.addEventListener('DOMContentLoaded', function(){
       'services.combo.desc': 'רפלקסולוגיה משולבת עם עיסוי ממוקד לצוואר, ידיים וקרקפת – לשחרור מתחים, שיפור זרימת הדם והרגעה עמוקה של מערכת העצבים.',
       'services.combo.level': 'פופולרי',
       'services.combo.duration': '90 דק’',
+      'services.deep.title': 'עיסוי רקמות עמוקות',
+      'services.deep.desc': 'עיסוי לכל הגוף',
+      'services.deep.level': 'עמוק',
+      'services.deep.duration': '60 דקות',
       'services.naturopath.title': 'ייעוץ נטורופתי',
       'services.naturopath.desc': 'תזונה מותאמת, תוספים וכלים יומיומיים – תכנית אישית לבריאות מאוזנת ויציבה.',
       'services.naturopath.level': 'אישי',
@@ -227,6 +235,10 @@ document.addEventListener('DOMContentLoaded', function(){
       'services.combo.desc': 'رفلكسولوجيا مدمجة مع تدليك مُركّز للعنق واليدين وفروة الرأس لتخفيف التوتر، تحسين الدورة الدموية وتهدئة الجهاز العصبي بعمق.',
       'services.combo.level': 'شائع',
       'services.combo.duration': '90 دقيقة',
+      'services.deep.title': 'تدليك الأنسجة العميقة',
+      'services.deep.desc': 'تدليك لكامل الجسم',
+      'services.deep.level': 'عميق',
+      'services.deep.duration': '60 دقيقة',
       'services.naturopath.title': 'استشارة ناتوروباثي',
       'services.naturopath.desc': 'تغذية مخصصة، مكمّلات وأدوات يومية — خطة شخصية لصحة متوازنة ومستقرة.',
       'services.naturopath.level': 'شخصي',
@@ -382,10 +394,10 @@ document.addEventListener('DOMContentLoaded', function(){
     setText('section#services .service:nth-child(2) .meta .pill:nth-child(1)','services.combo.level');
     setText('section#services .service:nth-child(2) .meta .pill:nth-child(2)','services.combo.duration');
 
-    setText('section#services .service:nth-child(3) h3','services.naturopath.title');
-    setText('section#services .service:nth-child(3) p','services.naturopath.desc');
-    setText('section#services .service:nth-child(3) .meta .pill:nth-child(1)','services.naturopath.level');
-    setText('section#services .service:nth-child(3) .meta .pill:nth-child(2)','services.naturopath.duration');
+    setText('section#services .service:nth-child(3) h3','services.deep.title');
+    setText('section#services .service:nth-child(3) p','services.deep.desc');
+    setText('section#services .service:nth-child(3) .meta .pill:nth-child(1)','services.deep.level');
+    setText('section#services .service:nth-child(3) .meta .pill:nth-child(2)','services.deep.duration');
 
     document.querySelectorAll('section#services .service .cta-row a').forEach(function(a){
       a.textContent = t('cta.book');
