@@ -478,18 +478,20 @@ input:focus,textarea:focus{border-color:var(--lav);box-shadow:0 0 0 4px rgba(166
 }
 
 /* Language switcher placement: absolute top-left inside hero */
-.hero, .hero-section{ position: relative; }
+.hero{ position: relative; padding-top: 72px; }
+.hero-section{ position: relative; padding-top: 72px; }
 
 .language-switcher{
   position: absolute !important;
-  top: 0;
+  top: 16px;
   left: 24px;
   right: auto;
   inset-inline-start: auto;
   inset-inline-end: auto;
   transform: none !important;
   margin: 0;
-  z-index: 25;
+  z-index: 10;
+  direction: ltr;
 }
 
 /* Responsive tweak: keep compact offset on small screens */
