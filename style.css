@@ -176,6 +176,7 @@ a:hover{text-decoration:underline}
 }
 .header-top .brand-stack .brand-text{
   line-height:1.05;
+  margin-bottom: 8px;
 }
 .header-top .brand-stack .brand-text strong{
   line-height:1.1;
@@ -186,11 +187,11 @@ a:hover{text-decoration:underline}
 
 /* Tweak logo size when stacked under text */
 .brand-stack .site-logo{
-  width: clamp(64px, 9vw, 96px);
+  width: clamp(80px, 11vw, 180px);
   aspect-ratio: 1 / 1;
   height: auto;
   border-radius: 12px;
-  margin-top: 2px;
+  margin-top: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
 
@@ -428,6 +429,9 @@ section#services .grid .card.service:first-child .translate-button,
     aspect-ratio: 1 / 1;
     height: auto;
     flex: 0 0 clamp(68px, 50vw, 280px);
+  }
+  .brand-stack .site-logo{
+    width: min(40vw, 120px);
   }
   .top-service-card{
     padding: clamp(18px, 4.8vw, 28px);
