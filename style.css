@@ -167,9 +167,9 @@ a:hover{text-decoration:underline}
   border:1px solid rgba(46,46,46,.08);
   box-shadow:var(--shadow-sm);
   position:fixed;
-  top:6px;
-  left:16px;
-  z-index:50;
+  top: calc(10px + env(safe-area-inset-top));
+  inset-inline-start:16px;
+  z-index:500;
 }
 .global-lang-switch .lang-btn{
   background:transparent;
