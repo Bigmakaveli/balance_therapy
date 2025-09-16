@@ -345,9 +345,10 @@ section#services .grid .card.service:first-child .translate-button,
 
 /* Header site logo bigger */
 .site-header .brand .site-logo{
-  width: 84px;
-  height: 84px;
-  flex: 0 0 84px;
+  width: clamp(120px, 50vw, 420px);
+  aspect-ratio: 1 / 1;
+  height: auto;
+  flex: 0 0 clamp(120px, 50vw, 420px);
   border-radius: 14px;
 }
 
@@ -366,9 +367,10 @@ section#services .grid .card.service:first-child .translate-button,
 }
 @media (max-width: 760px){
   .site-header .brand .site-logo{
-    width: 68px;
-    height: 68px;
-    flex: 0 0 68px;
+    width: clamp(68px, 50vw, 280px);
+    aspect-ratio: 1 / 1;
+    height: auto;
+    flex: 0 0 clamp(68px, 50vw, 280px);
   }
   .top-service-card{
     padding: clamp(18px, 4.8vw, 28px);
@@ -560,7 +562,10 @@ h3{font-size:var(--fs-3)}
     box-shadow:var(--shadow-sm);
   }
   .site-header .brand .logo{
-    width:56px;height:56px;flex:0 0 56px;
+    width: clamp(68px, 50vw, 280px);
+    aspect-ratio: 1 / 1;
+    height: auto;
+    flex: 0 0 clamp(68px, 50vw, 280px);
   }
   .site-header .brand .brand-text strong{
     font-size:1.25rem;
