@@ -183,7 +183,7 @@ a:hover{text-decoration:underline}
   background:transparent;
   border:1.5px solid rgba(46,46,46,.18);
   border-radius:999px;
-  padding:.22rem .52rem;
+  padding:6px 12px;
   font-weight:800;
   font-size:.8rem;
   line-height:1;
@@ -483,7 +483,7 @@ input:focus,textarea:focus{border-color:var(--lav);box-shadow:0 0 0 4px rgba(166
 
 .language-switcher{
   position: absolute !important;
-  top: 16px;
+  top: 8px;
   left: 24px;
   right: auto;
   inset-inline-start: auto;
@@ -544,11 +544,11 @@ h3{font-size:var(--fs-3)}
   /* Language switcher mobile compact spacing (non-sticky) */
   .lang-row{ justify-content:flex-end; }
   .lang-switcher{
-    gap: 6px;
+    gap: 8px;
     flex-wrap: wrap;
   }
   .lang-switcher .lang-btn{
-    padding: .3rem .6rem;
+    padding: 6px 12px;
     font-size: .78rem;
   }
 
