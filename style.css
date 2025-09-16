@@ -578,13 +578,13 @@ h3{font-size:var(--fs-3)}
     gap: 10px;
   }
   .nav-toggle{ display: none; }
-  .nav{ width: 100%; }
+  .nav{ width: 100%; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; }
   .nav .menu{
     position: static;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px 16px;
-    padding: 8px 0 12px;
+    flex-wrap: nowrap;
+    gap: 8px;
+    padding: 6px 0 10px;
     margin: 0;
     background: transparent;
     border: 0;
@@ -592,13 +592,16 @@ h3{font-size:var(--fs-3)}
     opacity: 1;
     pointer-events: auto;
     box-shadow: none;
+    white-space: nowrap;
   }
   .nav .menu a{
     display: inline-block;
-    padding: 10px 6px;
+    padding: 8px 8px;
+    font-size: .93rem;
     line-height: 1.2;
   }
   .nav .menu .divider{ display: none; }
+  .nav .menu > li{ flex: 0 0 auto; }
 
   /* Keep the booking CTA compact and inline */
   .nav .menu li:last-child{
@@ -612,6 +615,7 @@ h3{font-size:var(--fs-3)}
     inline-size:fit-content;
     max-inline-size:100%;
     white-space:normal;
-    padding: .6rem 1rem;
+    padding: .5rem .8rem;
+    font-size: .92rem;
   }
 }
