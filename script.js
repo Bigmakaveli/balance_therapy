@@ -990,9 +990,14 @@ document.addEventListener('DOMContentLoaded', function(){
             var dx = Math.cos(angle) * distance;
             var dy = Math.sin(angle) * distance;
 
-            // Start at logo center (viewport coords for fixed positioning)
-            el.style.left = originX + 'px';
-            el.style.top = originY + 'px';
+            // Start near logo center with slight random offset (viewport coords for fixed positioning)
+            var offsetRadius = prefersReduced ? 8 : 22;
+            var startAngle = Math.random() * Math.PI * 2;
+            var startDist = Math.random() * offsetRadius;
+            var startDx = Math.cos(startAngle) * startDist;
+            var startDy = Math.sin(startAngle) * startDist;
+            el.style.left = (originX + startDx) + 'px';
+            el.style.top = (originY + startDy) + 'px';
 
             // Personalize animation via CSS vars
             el.style.setProperty('--dx', dx.toFixed(2) + 'px');
@@ -1014,6 +1019,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
             // Duration / delay / easing
             var dur = prefersReduced ? (1400 + Math.random() * 400) : (2400 + Math.random() * 1400);
+            // Slow down overall motion
+            dur = dur * 2;
             var delay = Math.random() * 220;
             var ease = easings[Math.floor(Math.random() * easings.length)];
             el.style.setProperty('--dur', dur.toFixed(0) + 'ms');
@@ -1026,6 +1033,8 @@ document.addEventListener('DOMContentLoaded', function(){
             // Trail tuning
             var trailSize = 6 + Math.random() * 6;
             var trailDur = 600 + Math.random() * 500;
+            // Match slower main motion by doubling trail duration
+            trailDur = trailDur * 2;
             el.style.setProperty('--trail-size', trailSize.toFixed(0) + 'px');
             el.style.setProperty('--trail-dur', trailDur.toFixed(0) + 'ms');
 
