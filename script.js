@@ -80,6 +80,14 @@ document.addEventListener('DOMContentLoaded', function(){
       'offer.price': 'Intro price: <strong>₪XXX</strong>',
       'offer.cta': 'Get it now',
 
+      'offer2.title': 'Reflexology Package – 8 Treatments',
+      'offer2.copy': '<strong>Reflexology only, 50 minutes</strong> — includes 8 treatments.',
+      'offer2.li1': 'Balance and deep relaxation',
+      'offer2.li2': 'Improved sleep and energy',
+      'offer2.li3': 'Support for back/neck pain',
+      'offer2.price': 'Package price: <strong>₪XXX</strong>',
+      'offer2.cta': 'Book Now',
+
       'about.title': 'About me',
       'about.p1': '<strong>Gorget Rahiel</strong> — naturopath and reflexologist. My approach is gentle, attentive, and evidence‑based, integrating touch, nutrition, and daily tools to reduce stress.',
       'about.p2': 'Together we build a personal plan that promotes better sleep, energetic balance, and pain relief — at your pace.',
@@ -205,6 +213,14 @@ document.addEventListener('DOMContentLoaded', function(){
       'offer.price': 'מחיר חבילה: <strong>₪XXX</strong>',
       'offer.cta': 'להזמנה מיידית',
 
+      'offer2.title': 'חבילת רפלקסולוגיה – 8 טיפולים',
+      'offer2.copy': '<strong>רפלקסולוגיה בלבד, 50 דקות</strong> — כולל 8 טיפולים.',
+      'offer2.li1': 'איזון והרגעה עמוקה',
+      'offer2.li2': 'שיפור השינה והאנרגיה',
+      'offer2.li3': 'תמיכה בכאבי גב/צוואר',
+      'offer2.price': 'מחיר חבילה: <strong>₪XXX</strong>',
+      'offer2.cta': 'להזמנה מידית',
+
       'about.title': 'עליי',
       'about.p1': '<strong>גורגית רחייל</strong> – נטורופטית ורפלקסולוגית. אני מאמינה בטיפול עדין, קשוב ומבוסס‑עדויות שמשלב מגע, תזונה וכלים יומיומיים להורדת סטרס.',
       'about.p2': 'ביחד נבנה תכנית אישית שמקדמת שינה טובה, איזון אנרגטי והקלה בכאב – בקצב שלכם.',
@@ -329,6 +345,14 @@ document.addEventListener('DOMContentLoaded', function(){
       'offer.li3': 'العودة إلى الجسد وإلى الهدوء الداخلي',
       'offer.price': 'سعر تعريفي: <strong>₪XXX</strong>',
       'offer.cta': 'اطلب الآن',
+
+      'offer2.title': 'باقة ريفلكسولوجيا – 8 جلسات',
+      'offer2.copy': '<strong>ريفلكسولوجيا فقط، 50 دقيقة</strong> — تشمل 8 جلسات.',
+      'offer2.li1': 'توازن واسترخاء عميق',
+      'offer2.li2': 'تحسين النوم والطاقة',
+      'offer2.li3': 'دعم لآلام الظهر/الرقبة',
+      'offer2.price': 'سعر الباقة: <strong>₪XXX</strong>',
+      'offer2.cta': 'للحجز الفوري',
 
       'about.title': 'نبذة عنّي',
       'about.p1': '<strong>غورغيت رحيل</strong> — معالجة بالطبيعة وأخصائية رفلكسولوجيا. أؤمن بعلاج لطيف ومُصغٍ قائم على الأدلة يجمع اللمس والتغذية وأدوات يومية لتخفيف التوتر.',
@@ -535,6 +559,17 @@ document.addEventListener('DOMContentLoaded', function(){
     if (offerLis[2]) offerLis[2].textContent = t('offer.li3');
     setHTML('section.offer .card .price','offer.price');
     setText('section.offer .card .cta-row a.btn-primary','offer.cta');
+
+    // Offer - second card (Reflexology package)
+    setText('section.offer .container.grid .card:nth-child(2) h2','offer2.title');
+    setHTML('section.offer .container.grid .card:nth-child(2) h2 + p','offer2.copy');
+    var offer2Lis = document.querySelectorAll('section.offer .container.grid .card:nth-child(2) ul.list li');
+    if (offer2Lis[0]) offer2Lis[0].textContent = t('offer2.li1');
+    if (offer2Lis[1]) offer2Lis[1].textContent = t('offer2.li2');
+    if (offer2Lis[2]) offer2Lis[2].textContent = t('offer2.li3');
+    setHTML('section.offer .container.grid .card:nth-child(2) .price','offer2.price');
+    var offer2Cta = document.querySelector('section.offer .container.grid .card:nth-child(2) .cta-row a.btn-primary');
+    if (offer2Cta) offer2Cta.textContent = t('offer2.cta');
 
     // About
     setText('#about-title','about.title');
