@@ -958,13 +958,22 @@ document.addEventListener('DOMContentLoaded', function(){
     var logo = document.getElementById('logo');
     if (!logo) return;
 
+    var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     // Slight delay to ensure layout is stable
     setTimeout(function(){
       var rect = logo.getBoundingClientRect();
       var originX = rect.left + rect.width / 2;
       var originY = rect.top + rect.height / 2;
 
-      var count = 10;
+      var count = prefersReduced ? 4 : (window.innerWidth < 760 ? 8 : 12);
+      var easings = [
+        'cubic-bezier(.22,.61,.36,1)',
+        'cubic-bezier(.17,.67,.5,1)',
+        'cubic-bezier(.19,1,.22,1)',
+        'cubic-bezier(.4,0,.2,1)'
+      ];
+
       for (var i = 0; i < count; i++){
         (function(i){
           setTimeout(function(){
@@ -975,7 +984,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
             // Random trajectory
             var angle = Math.random() * Math.PI * 2;
-            var distance = 350 + Math.random() * 300;
+            var minDist = prefersReduced ? 200 : 320;
+            var maxDist = prefersReduced ? 320 : 650;
+            var distance = minDist + Math.random() * (maxDist - minDist);
             var dx = Math.cos(angle) * distance;
             var dy = Math.sin(angle) * distance;
 
@@ -986,12 +997,40 @@ document.addEventListener('DOMContentLoaded', function(){
             // Personalize animation via CSS vars
             el.style.setProperty('--dx', dx.toFixed(2) + 'px');
             el.style.setProperty('--dy', dy.toFixed(2) + 'px');
-            el.style.setProperty('--rot', (Math.random() * 540 - 270).toFixed(1) + 'deg');
 
-            // Variation
+            // Rotation end
+            var rot = (Math.random() * 540 - 270).toFixed(1) + 'deg';
+            el.style.setProperty('--rot', rot);
+
+            // Scale variation
+            var s0 = (0.9 + Math.random() * 0.2).toFixed(2);
+            var s1 = (1.05 + Math.random() * 0.2).toFixed(2);
+            el.style.setProperty('--scale-start', s0);
+            el.style.setProperty('--scale-end', s1);
+
+            // Lateral drift
+            var drift = prefersReduced ? 0 : (Math.random() * 120 - 60);
+            el.style.setProperty('--drift', drift.toFixed(1) + 'px');
+
+            // Duration / delay / easing
+            var dur = prefersReduced ? (1400 + Math.random() * 400) : (2400 + Math.random() * 1400);
+            var delay = Math.random() * 220;
+            var ease = easings[Math.floor(Math.random() * easings.length)];
+            el.style.setProperty('--dur', dur.toFixed(0) + 'ms');
+            el.style.setProperty('--delay', delay.toFixed(0) + 'ms');
+            el.style.setProperty('--ease', ease);
+            el.style.animationDuration = dur + 'ms';
+            el.style.animationDelay = delay + 'ms';
+            el.style.animationTimingFunction = ease;
+
+            // Trail tuning
+            var trailSize = 6 + Math.random() * 6;
+            var trailDur = 600 + Math.random() * 500;
+            el.style.setProperty('--trail-size', trailSize.toFixed(0) + 'px');
+            el.style.setProperty('--trail-dur', trailDur.toFixed(0) + 'ms');
+
+            // Font size variation
             el.style.fontSize = (18 + Math.random() * 12).toFixed(0) + 'px';
-            el.style.animationDuration = '3s';
-            el.style.animationDelay = (Math.random() * 250).toFixed(0) + 'ms';
 
             document.body.appendChild(el);
 
@@ -999,8 +1038,8 @@ document.addEventListener('DOMContentLoaded', function(){
               if (el && el.parentNode) el.parentNode.removeChild(el);
             };
             el.addEventListener('animationend', cleanup, { once: true });
-            setTimeout(cleanup, 3600); // safety cleanup
-          }, i * 60); // subtle stagger
+            setTimeout(cleanup, Math.ceil(dur) + 900); // safety cleanup
+          }, i * (prefersReduced ? 70 : 60)); // subtle stagger
         })(i);
       }
     }, 150);
