@@ -1019,9 +1019,10 @@ document.addEventListener('DOMContentLoaded', function(){
 
             // Duration / delay / easing
             var dur = prefersReduced ? (1400 + Math.random() * 400) : (2400 + Math.random() * 1400);
-            // Slow down overall motion
-            dur = dur * 2;
+            // Slow down overall motion (+50% longer in non-reduced motion)
+            dur = dur * (prefersReduced ? 2 : 3);
             var delay = Math.random() * 220;
+            if (!prefersReduced) { delay = delay * 1.5; }
             var ease = easings[Math.floor(Math.random() * easings.length)];
             el.style.setProperty('--dur', dur.toFixed(0) + 'ms');
             el.style.setProperty('--delay', delay.toFixed(0) + 'ms');
@@ -1033,8 +1034,8 @@ document.addEventListener('DOMContentLoaded', function(){
             // Trail tuning
             var trailSize = 6 + Math.random() * 6;
             var trailDur = 600 + Math.random() * 500;
-            // Match slower main motion by doubling trail duration
-            trailDur = trailDur * 2;
+            // Match slower main motion by doubling trail duration (+50% longer in non-reduced motion)
+            trailDur = trailDur * (prefersReduced ? 2 : 3);
             el.style.setProperty('--trail-size', trailSize.toFixed(0) + 'px');
             el.style.setProperty('--trail-dur', trailDur.toFixed(0) + 'ms');
 
@@ -1048,7 +1049,7 @@ document.addEventListener('DOMContentLoaded', function(){
             };
             el.addEventListener('animationend', cleanup, { once: true });
             setTimeout(cleanup, Math.ceil(dur) + 900); // safety cleanup
-          }, i * (prefersReduced ? 70 : 60)); // subtle stagger
+          }, i * (prefersReduced ? 70 : 90)); // subtle stagger (+50% non-reduced)
         })(i);
       }
     }, 150);

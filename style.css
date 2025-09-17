@@ -763,7 +763,7 @@ h3{font-size:var(--fs-3)}
   font-size: 24px;
   line-height: 1;
   will-change: transform, opacity;
-  animation: emoji-shoot var(--dur, 3000ms) var(--ease, ease-out) forwards;
+  animation: emoji-shoot var(--dur, 4500ms) var(--ease, ease-out) forwards;
   animation-delay: var(--delay, 0ms);
   pointer-events: none;
   z-index: 2000;
@@ -783,7 +783,7 @@ h3{font-size:var(--fs-3)}
   background: radial-gradient(circle at center, rgba(255,255,255,.9), rgba(255,255,255,0) 70%);
   filter: drop-shadow(0 2px 6px rgba(0,0,0,.18));
   opacity: .4;
-  animation: emoji-trail var(--trail-dur, 900ms) ease-out forwards;
+  animation: emoji-trail var(--trail-dur, 1350ms) ease-out forwards;
 }
 
 @keyframes emoji-shoot{
